@@ -4,7 +4,7 @@ Author: Christophe Bécavin, Anne Biton, Hub Bioinformatic and Biostatistic
 
 28 rue du Docteur Roux, Institut Pasteur, Paris
 
-GitLab: https://gitlab.pasteur.fr/cbecavin/MeRIPSeq/
+Previous repository: https://gitlab.pasteur.fr/cbecavin/MeRIPSeq/
 
 Executable (2 versions are available one for local computing, another for slurm cluster computing)
 ### For local analysis
