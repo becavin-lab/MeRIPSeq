@@ -1,0 +1,1 @@
+DataName	IP_dataset	Input_dataset	BioCond	SeqAm_ZT3_1	Am_ZT3_IP_1	Am_ZT3_Input_1	Am	1Am_ZT13_1	Am_ZT13_IP_1	Am_ZT13_Input_1	Am	2CONV_ZT3_1	CONV_ZT3_IP_1	CONV_ZT3_Input_1	CONV	1CONV_ZT13_4	CONV_ZT13_IP_4	CONV_ZT13_Input_4	CONV	2

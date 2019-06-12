@@ -1,0 +1,23 @@
+Package: m6aAnalysis
+Type: Package
+Title: Package for m6aAnalysis datasets
+Version: 0.1.0
+Author: Christophe Becavin
+Maintainer: Christophe Becavin <christophe.becavin@pasteur.fr>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports:
+    SARTools,
+    limma,
+    edgeR,
+    RColorBrewer,
+    ggplot2,
+    gplots,
+    ggfortify,
+    seqinr,
+    Guitar,
+    dendextend,
+    sva

@@ -1,0 +1,14 @@
+Liver_all_T13	MaxMaxValues_3	All
+Liver_all_T13	MaxMaxValues_3	Diff_Meth
+Liver_all_T13	MaxMaxValues_3	Diff_MethvsGene
+Liver_all_T13	MaxMaxValues_3	Diff_MethNoGene
+Liver_all_T13	MaxMaxValues_3	CONV-Am
+Liver_all_T13	MaxMaxValues_3	Ec-Am
+Liver_all_T13	MaxMaxValues_3	GF-Am
+Liver_all_T13	MaxMaxValues_3	Lp-Am
+Liver_all_T13	MaxMaxValues_3	Ec-CONV
+Liver_all_T13	MaxMaxValues_3	GF-CONV
+Liver_all_T13	MaxMaxValues_3	Lp-CONV
+Liver_all_T13	MaxMaxValues_3	GF-Ec
+Liver_all_T13	MaxMaxValues_3	Lp-Ec
+Liver_all_T13	MaxMaxValues_3	Lp-GF

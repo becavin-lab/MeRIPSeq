@@ -1,0 +1,106 @@
+#### Install MeRIPSeq pipeline
+git clone git@gitlab.pasteur.fr:cbecavin/MeRIPSeq.git
+
+#### Install dependencies
+## Python install
+# Our scripts use HTSeq library which run only on python 2.7
+# We recommend to use Anaconda : https://docs.anaconda.com/anaconda/install/ to manage an installation of Python 2.7. By default Python will be install with version 3.6
+# Prerequisite - Install Anaconda
+# Create a conda environment with python 2.7
+conda create --name py27 python=2.7
+conda activate py27
+conda install -c bcbio htseq 
+conda install -c anaconda biopython statsmodels numpy pandas
+pip install fisher
+
+## Create also a python 3.6 environment (some R package might not work with python 2.7)
+# Create a conda environment with python 3.6
+conda create --name py36 python=3.6
+
+## AlienTrimmer 0.4.0 
+# ftp://ftp.pasteur.fr/pub/gensoft/projects/AlienTrimmer/AlienTrimmer_0.4.0.tar.gz
+# AlienTrimmer should be provided with an adapter fasta file
+
+## FastQC 0.10.1 
+# http://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc
+
+## STAR Mapper 2.5.0a
+#MANUAL - https://github.com/alexdobin/STAR
+git clone https://github.com/alexdobin/STAR.git
+cd source
+make STARforMacStatic
+
+## SAMTools 0.1.19 
+#https://github.com/samtools/samtools
+
+## Bedtools 2.27.0
+# http://bedtools.readthedocs.io/en/latest/index.html
+# https://github.com/arq5x/bedtools2
+
+## MultiQC 1.5
+# http://multiqc.info/
+conda install multiqc
+
+## MACS2 2.1.1
+# https://github.com/taoliu/MACS/wiki/Install-macs2
+conda install MACS2
+
+## MEMESuite 5.0.5
+# http://meme-suite.org/meme-software/5.0.5/meme-5.0.5.tar.gz
+wget http://meme-suite.org/meme-software/5.0.5/meme-5.0.5.tar.gz
+
+## SALMON 
+# https://combine-lab.github.io/salmon/getting_started/
+conda config --add channels conda-forge
+conda config --add channels bioconda
+conda install salmon
+
+# R 3.3.3
+# https://www.r-project.org/
+# WARNING : Install R packages in your environment py36, after "source activate py36"
+# Some R packages might not work with python 2.7
+# Install R packages (open R and run following lines)
+source activate py36
+install.packages(c("ggplot2","gplots","ggfortify","RColorBrewer","seqinr","dendextend"))
+install.packages(c("foreach","dplyr","gridExtra","readr","WriteXLS","pheatmap")
+
+# Install R Limma Bioconductor
+source("https://bioconductor.org/biocLite.R")
+biocLite()
+biocLite(c("DESeq2","limma","Guitar","edgeR", "genefilter","sva"))
+biocLite(c("limma","Guitar","genefilter","sva"))
+biocLite(c("DEXSeq","stageR","DRIMSeq","BiocParallel"))
+
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("MineICA", version = "3.8")
+
+
+install.packages("devtools")
+library(devtools)
+install_github("PF2-pasteur-fr/SARTools", build_vignettes=FALSE)
+
+
+
+# For parallel computing
+# Install R script on Slurm cluster
+conda update -n base conda
+conda config --add channels defaults
+conda config --add channels conda-forge
+conda config --add channels bioconda
+conda create --name rscript python
+source activate rscript
+
+conda install bioconductor-genomicranges
+conda install bioconductor-rtracklayer
+conda install bioconductor-biomart
+conda install bioconductor-edger
+conda install bioconductor-genomicfeatures
+
+conda install r-sartools
+conda install bioconductor-sva
+# in R
+install.packages(c("ggplot2","gplots","ggfortify","RColorBrewer","seqinr","dendextend"))
+install.packages(c("pheatmap","GGally"))
+install.packages("UpSetR")

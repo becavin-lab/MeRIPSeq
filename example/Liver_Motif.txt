@@ -1,0 +1,12 @@
+Liver	
+Liver	_Meth
+Liver	_Meth_5UTR
+Liver	_Meth_3UTR
+Liver	_Meth_CDS
+Liver	_Meth_Intron
+Liver	_MethNoGene
+Liver	_MethGene
+Liver	_Meth-Gene-
+Liver	_Meth+Gene+
+Liver	_NoMeth
+Liver	_Meth_Epi

@@ -1,0 +1,3 @@
+Liver	MaxMaxValues_3	Diff_Meth
+Liver	MaxMaxValues_3	Diff_MethvsGene
+Liver	MaxMaxValues_3	Diff_MethNoGene
